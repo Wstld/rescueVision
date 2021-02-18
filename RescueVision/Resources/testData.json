@@ -1,0 +1,237 @@
+[{
+        "name": "Flir K55",
+        "id": 1001,
+        "contains": [{
+                "name": "jojo",
+                "amount": 1
+            },
+            {
+                "name": "torkduk",
+                "amount": 1
+            },
+            {
+                "name": "bältesskärare",
+                "amount": 1
+            }
+        ],
+        "properties": {
+            "weight": 0,
+            "size": {
+                "width": 0,
+                "depth": 0,
+                "height": 0
+            }
+        },
+        "info": {
+            "warning": [
+                "ser ej genom glas"
+            ],
+            "handelingTips": [
+                "använd immskydd",
+                "var rörlig för bästa bild"
+            ],
+            "options": [
+                "varm",
+                "kall",
+                "bla"
+            ]
+        }
+    },
+    {
+        "name": "rökdykarlampa",
+        "id": 1002,
+        "properties": {
+            "weight": 0,
+            "size": {
+                "width": 0,
+                "depth": 0,
+                "height": 0
+            }
+        },
+        "info": {
+            "warning": [
+                "Ej Ex-klassad"
+            ],
+            "handelingTips": [
+                "kan ställas på högkant",
+                "placeras ett våningsplan under angreppsväg"
+            ],
+            "physicallProperties":[
+                {
+                    "title": "vikt",
+                    "value": 0
+                }
+                
+            ],
+            
+        }
+    },
+    {
+        "name": "GasAlertMax XT",
+        "id": 1003,
+        "contains": [{
+            "name": "slang",
+            "amount": 1
+        }],
+        "properties": {
+            "weight": 0,
+            "size": {
+                "width": 0,
+                "depth": 0,
+                "height": 0
+            }
+        },
+        "info": {
+            "warning": [
+                "långsam mätning",
+                "3 varningsnivåer"
+            ],
+            "handelingTips": [
+                "vänta på analys innan framryckning"
+            ],
+            "misc": [{
+                "title": "mätvärden",
+                "information": "O₂,CO,H₂S"
+            }]
+        }
+    },
+    {
+        "name": "JT-pack",
+        "id": 1004,
+        "contains": [{
+                "name": "smalslang",
+                "amount": 2
+            },
+            {
+                "name": "bärselse",
+                "amount": 1
+            },
+            {
+                "name": "fästsling",
+                "amount": 1
+            }
+        ],
+        "properties": {
+            "weight": 0,
+            "size": {
+                "width": 100,
+                "depth": 100,
+                "height": 100
+            },
+            "misc": [{
+                "proprtieName": "slanglängd",
+                "propertieValue": 500000
+            }]
+        },
+        "info": {
+            "warning": [
+                "innre koppling till strålrör",
+                "yttre koppling till kyrka"
+            ],
+            "handelingTips": [
+                "kan ställas på högkant",
+                "placeras ett våningsplan under angreppsväg"
+            ]
+        }
+    },
+    {
+        "name": "TFT Ultimatic Trigger lt",
+        "id": 1005,
+        "properties": {
+            "weight": 1540,
+            "misc": [{
+                    "proprtieName": "minFlöde",
+                    "propertieValue": 40
+                },
+                {
+                    "proprtieName": "maxFlöde",
+                    "propertieValue": 500
+                },
+                {
+                    "proprtieName": "arbetstryck",
+                    "propertieValue": 7
+                },
+                {
+                    "proprtieName": "kastlängd",
+                    "propertieValue": 38
+                }
+            ]
+        },
+        "info": {
+            "warning": [
+                "flödesstängning något fördröjd"
+            ],
+            "handelingTips": [
+                "tryck tillbaka avtryckare för snabbare stängning"
+            ],
+            "options": [
+                "slutenstråle",
+                "skyddsstråle",
+                "steglös strålbild"
+            ]
+        }
+    },
+    {
+        "name": "ridårör",
+        "id": 1006,
+        "properties": {
+            "weight": 1100,
+            "misc": [{
+                    "proprtieName": "flöde",
+                    "propertieValue": 800
+                },
+                {
+                    "proprtieName": "ridåhöjd",
+                    "propertieValue": 8
+                },
+                {
+                    "proprtieName": "ridåbredd",
+                    "propertieValue": 25
+                }
+            ]
+        },
+        "info": {
+            "warning": [
+                "ankra innan trycksättning"
+            ]
+        }
+    },
+    {
+        "name": "kedjesåg",
+        "id": 1007,
+        "contains": [{
+                "name": "universalnyckel",
+                "amount": 1
+            },
+            {
+                "name": "kedjeskydd",
+                "amount": 1
+            }
+        ],
+        "properties": {
+            "weight": 0,
+            "misc": [{
+                "proprtieName": "svärdlängd",
+                "propertieValue": 0
+            }]
+        },
+        "info": {
+            "warning": [
+                "användskydds utrustning",
+                "kontrollera skyddsmekanismer",
+                "endast för användning mot trä",
+                "använd fästsling vid arbete på höghöjd"
+            ],
+            "handelingTips": [
+                "starta utanför faktiskt arbetsområde"
+            ],
+            "options": [
+                "hej"
+            ],
+            "misc": [{
+                "titel": "skyddsanordningar",
+                "information": "kastskydd, motorstopp"
+            }]
+        }
+    }
+]
