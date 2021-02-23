@@ -1,15 +1,16 @@
 //MARK: - InvetoryItem
 struct InventoryItem:Codable,Identifiable,Hashable {
     enum CodingKeys:String,CodingKey {
-        case name,id,contains,info,properties,video
+        case name,id,contains,info,properties,videoUrl
     }
     
     let name:String
     let id:Int
-    let video:String?
+    var videoUrl:String?
     var contains:[Sections]?
     var properties: [PropertyValues]
     var info:InfoEntry?
+
     
    
 
@@ -19,6 +20,12 @@ struct InventoryItem:Codable,Identifiable,Hashable {
         
         name = try container.decode(String.self, forKey: .name)
         id = try container.decode(Int.self, forKey: .id)
+        
+        if container.contains(.videoUrl){
+            videoUrl = try container.decode(String.self, forKey: .videoUrl)
+        }else{
+            videoUrl = nil
+        }
         
         if container.contains(.contains){
         contains = try container.decode([Sections].self, forKey: .contains)

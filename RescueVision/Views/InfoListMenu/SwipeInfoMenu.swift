@@ -101,12 +101,13 @@ struct SwipeInfoMenu: View {
                             }
             
                        //show video
+                    if identifiedObject.videoUrl != nil{
                         VStack{
-                            VideoView(videoURL: Bundle.main.url(forResource: "video.MOV", withExtension: nil)!)
+                            VideoView(videoURL:identifiedObject.videoUrl!)
                                 .frame(width: screenWidth - 15, height: screenWidth - 15)
                                 .cornerRadius(5)
                         }
-                        
+                    }
                         //show info
                         VStack{
                             Text("Information")

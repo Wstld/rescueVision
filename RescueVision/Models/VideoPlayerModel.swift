@@ -11,23 +11,20 @@ import AVKit
 class VideoPlayerModel: ObservableObject {
     @Published var player = AVPlayer()
     @Published var isPlaying = false
-    
- 
-  
-//    private var previewTimer: Timer?
-    
     var layer = AVPlayerLayer()
+   
     init() {
         layer.player = self.player
         layer.videoGravity = .resizeAspectFill
         layer.backgroundColor = CGColor.init(red: 169, green: 169, blue: 169, alpha: 1)
         
-        let videoSampleItem = AVPlayerItem(url: URL(fileURLWithPath: Bundle.main.path(forResource: "video", ofType: "MOV")!))
-        player.replaceCurrentItem(with: videoSampleItem)
+//        let videoSampleItem = AVPlayerItem(url: URL(string:"https://www.youtube.com/embed/Mp2Op0F8ULI")!)
+//        player.replaceCurrentItem(with: videoSampleItem)
     }
     
-    func setVideo(videoURL:URL){
-        let asset = AVAsset(url: videoURL)
+    func setVideo(videoURL:String){
+        let urlSet = URL(string: videoURL)!
+        let asset = AVAsset(url: urlSet)
         let video = AVPlayerItem(asset: asset)
         
         NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)

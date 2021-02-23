@@ -11,16 +11,12 @@ import FirebaseFirestoreSwift
 
 
 struct FireBaseModel {
-    var db = Firestore.firestore()
+    private let db = Firestore.firestore()
     var identifiableObjects:CollectionReference{
         return db.collection("identifiableObjects")
     }
-   
-
-    
+       
     func fetchItemInfo(name:String,completion: @escaping (_ retrivedObject:InventoryItem) -> Void){
-        
-//        let document = identifiableObjects.document("\(name.lowercased())")
         let document = identifiableObjects.document("\(name)")
         document.getDocument{(doc, error) in
             let result = Result {
@@ -38,11 +34,6 @@ struct FireBaseModel {
                 print("error decoding: \(error)")
             }
         }
-        
-  
-        
-  
-        
     }
     
     func uploadJSONtoFireBase(objects:[InventoryItem]){

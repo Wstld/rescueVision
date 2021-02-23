@@ -11,12 +11,12 @@ import AVKit
 
 struct VideoPreview:UIViewRepresentable {
     @ObservedObject var videoPlayer: VideoPlayerModel
-    var videoURL:URL?
+    var videoURL:String
     
     func makeUIView(context: Context) ->  UIView {
-        if let video = videoURL {
-        videoPlayer.setVideo(videoURL:video)
-        }
+    
+        videoPlayer.setVideo(videoURL:videoURL)
+        
         
         let view = VideoUIView(frame: .zero, videoPlayer: videoPlayer)
         return view

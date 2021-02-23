@@ -30,7 +30,7 @@ struct  PlayBtn: View {
 struct VideoView: View {
     @StateObject var videoPlayer = VideoPlayerModel()
     
-    var videoURL:URL
+    var videoURL:String
     
     var body: some View {
         GeometryReader{ geo in
@@ -58,8 +58,4 @@ struct VideoView: View {
     }
 }
 
-struct VideoPlayer_Previews: PreviewProvider {
-    static var previews: some View {
-        VideoView(videoURL: URL(fileURLWithPath: Bundle.main.path(forResource: "video", ofType: "MOV")!))
-    }
-}
+

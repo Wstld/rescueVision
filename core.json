@@ -2,6 +2,7 @@
    {
       "name":"JT-pack",
       "id":1001,
+      "videoUrl":"https://firebasestorage.googleapis.com/v0/b/rescuevision-e3f3a.appspot.com/o/videos%2Fsample2.mp4?alt=media&token=5d721d2f-3cb3-428f-b1a7-e13445a99d3a",
       "contains":[
          {
             "section_name":"Monterat",
@@ -47,6 +48,7 @@
    {
       "name":"Flir K55",
       "id":1002,
+      "videoUrl":"https://firebasestorage.googleapis.com/v0/b/rescuevision-e3f3a.appspot.com/o/videos%2Fsample.mp4?alt=media&token=9d3f441d-899b-46f4-8f29-99b2de279e55",
       "contains":[
          {
             "section_name":"Monterat",
@@ -202,6 +204,7 @@
    {
       "name":"Räddningssåg Stihl RHD",
       "id":1007,
+      "videoUrl":"https://firebasestorage.googleapis.com/v0/b/rescuevision-e3f3a.appspot.com/o/videos%2Fsample.mp4?alt=media&token=9d3f441d-899b-46f4-8f29-99b2de279e55",
       "info":{
          "warning":[
             "kast vid ansättning av övre yttre svärdshörn",
@@ -351,7 +354,6 @@
                   "name":"Elektrodplattor",
                   "amount":1
                }
-               
             ]
          }
       ],
@@ -1407,6 +1409,7 @@
    {
       "name":"Stegbil 1330",
       "id":1012,
+      "videoUrl":"https://firebasestorage.googleapis.com/v0/b/rescuevision-e3f3a.appspot.com/o/videos%2Fsample2.mp4?alt=media&token=5d721d2f-3cb3-428f-b1a7-e13445a99d3a",
       "contains":[
          {
             "section_name":"Hytt",
@@ -1416,9 +1419,9 @@
                   "amount":2
                },
                {
-                   "name":"Handlyckta RD",
-                   "amount":2
-                },
+                  "name":"Handlyckta RD",
+                  "amount":2
+               },
                {
                   "name":"Handlyckta stav",
                   "amount":1
@@ -1792,6 +1795,7 @@
    {
       "name":"Hoppkudde sp16",
       "id":1013,
+      "videoUrl":"https://firebasestorage.googleapis.com/v0/b/rescuevision-e3f3a.appspot.com/o/videos%2Fsample2.mp4?alt=media&token=5d721d2f-3cb3-428f-b1a7-e13445a99d3a",
       "contains":[
          {
             "section_name":"Monterat",
@@ -1822,11 +1826,11 @@
          ]
       },
       "properties":{
-          "height":{
-             "text":"höjd",
-             "value":1.7,
-             "unit":"m"
-          },
+         "height":{
+            "text":"höjd",
+            "value":1.7,
+            "unit":"m"
+         },
          "width":{
             "text":"bredd",
             "value":3.5,
@@ -1843,6 +1847,5 @@
             "unit":"kg"
          }
       }
-   },
+   }
 ]
-

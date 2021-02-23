@@ -110,10 +110,12 @@ struct ContentView: View {
                                 self.isSideSwiping = false
                                 //enought sidways will toggle objectrecognition and kill info menu
                                 if value.translation.width > 130 || value.translation.width < -130 {
-                                    viewModel.camera.toggleOutput()
+                                    menuIsExposed = false
                                     offsetValWidth = 0
                                     offsetValHeigth = lowestOffestValue
-                                    menuIsExposed = false
+
+                                    viewModel.camera.toggleOutput()
+                                                                       
                                 }
                                 //not enough will take it back to center of screen.
                                 if value.translation.width >=  0 && value.translation.width < 130 || value.translation.width <=  0 && value.translation.width > -130 {
@@ -123,23 +125,24 @@ struct ContentView: View {
                                 //same control as above but for up&down
                                 if value.translation.height > 0{
                                     if value.translation.height > 100 {
-                                        self.offsetValHeigth = lowestOffestValue
-                                        self.menuIsExposed = false
+                                        offsetValHeigth = lowestOffestValue
+                                        menuIsExposed = false
                                     }else {
-                                        self.offsetValHeigth = 50
+                                        offsetValHeigth = 50
+                                        menuIsExposed = true
                                     }
                                 }else{
                                     if value.translation.height < -100 {
-                                        self.offsetValHeigth = 50
-                                        self.menuIsExposed = true
+                                        offsetValHeigth = 50
+                                        menuIsExposed = true
                                     }else {
-                                        self.offsetValHeigth = lowestOffestValue
+                                        offsetValHeigth = lowestOffestValue
+                                        menuIsExposed = false
+                                        
                                     }
                                 }
                                 
-                            })).animation(.spring()).background(Color.clear).onAppear(perform: {
-                                print(lowestOffestValue)
-                            })
+                            })).animation(.spring()).background(Color.clear)
           
                 
             }
