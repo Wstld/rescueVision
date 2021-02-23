@@ -52,7 +52,7 @@ class CameraModel: NSObject, ObservableObject,AVCaptureVideoDataOutputSampleBuff
     
     func setupVision(){
         
-        guard let url = Bundle.main.url(forResource: "YOLOv3", withExtension: "mlmodelc") else {
+        guard let url = Bundle.main.url(forResource: "RSQ1", withExtension: "mlmodelc") else {
             fatalError("no such file")
         }
         do {

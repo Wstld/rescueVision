@@ -12,9 +12,18 @@ struct SwipeInfoMenu: View {
     var screenWidth = UIScreen.main.bounds.width < UIScreen.main.bounds.height ? UIScreen.main.bounds.width : UIScreen.main.bounds.height
     
     var identifiedObject:InventoryItem
+    @Binding var menuIsExposed:Bool
     //improvments = sepparate logic from InventoryItem for multipurpose.
     var body: some View {
             VStack(spacing:0){
+       
+                    Image(systemName: "chevron.up.circle")
+                        .font(Font.system(.title))
+                        .padding(2)
+                        .rotationEffect(.degrees(menuIsExposed ? 180 : 0))
+                        .animation(.easeInOut)
+            
+                
                 Text(identifiedObject.name)
                     .fontWeight(.bold)
                     .font(.title)
@@ -154,11 +163,9 @@ struct SwipeInfoMenu: View {
 
 struct SwipeInfoMenu_Previews: PreviewProvider {
     static var previews: some View {
-        let data = ModelJsonData().invetoryList[0]
+        let data = ModelJsonData().invetoryList[10]
         Group {
-            SwipeInfoMenu(identifiedObject:data)
-            SwipeInfoMenu(identifiedObject:data)
-            .preferredColorScheme(.dark)
+//            SwipeInfoMenu(identifiedObject:data)
         }
     }
 }

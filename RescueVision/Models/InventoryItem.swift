@@ -1,11 +1,12 @@
 //MARK: - InvetoryItem
 struct InventoryItem:Codable,Identifiable,Hashable {
     enum CodingKeys:String,CodingKey {
-        case name,id,contains,info,properties
+        case name,id,contains,info,properties,video
     }
     
     let name:String
     let id:Int
+    let video:String?
     var contains:[Sections]?
     var properties: [PropertyValues]
     var info:InfoEntry?

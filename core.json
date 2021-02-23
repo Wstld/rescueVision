@@ -39,7 +39,7 @@
          },
          "weight":{
             "text":"vikt",
-            "value":50,
+            "value":16.8,
             "unit":"kg"
          }
       }
@@ -79,8 +79,8 @@
       "properties":{
          "weight":{
             "text":"vikt",
-            "value":0,
-            "unit":"?"
+            "value":1.5,
+            "unit":"kg"
          }
       }
    },
@@ -98,8 +98,8 @@
       "properties":{
          "weight":{
             "text":"vikt",
-            "value":0,
-            "unit":"?"
+            "value":0.4,
+            "unit":"kg"
          }
       }
    },
@@ -130,8 +130,8 @@
       "properties":{
          "weight":{
             "text":"vikt",
-            "value":0,
-            "unit":"?"
+            "value":0.33,
+            "unit":"kg"
          }
       }
    },
@@ -261,6 +261,15 @@
                   "amount":1
                }
             ]
+         },
+         {
+            "section_name":"Avsides",
+            "section_items":[
+               {
+                  "name":"Mini-ram",
+                  "amount":1
+               }
+            ]
          }
       ],
       "info":{
@@ -284,41 +293,82 @@
       "id":1009,
       "contains":[
          {
-            "section_name":"Fack 1",
+            "section_name":"Väskan",
             "section_items":[
                {
-                  "name":"?",
+                  "name":"Syrgasflaska 2l",
                   "amount":1
                },
                {
-                  "name":"?",
+                  "name":"Vit förlängningsslang",
                   "amount":1
                },
                {
-                  "name":"?",
+                  "name":"Nippel",
                   "amount":1
                },
                {
-                  "name":"?",
+                  "name":"Pocketmask",
+                  "amount":1
+               },
+               {
+                  "name":"Flexslang, pocketmask",
+                  "amount":1
+               },
+               {
+                  "name":"Reservoirmask",
+                  "amount":2
+               },
+               {
+                  "name":"Kirurghandskar, par",
+                  "amount":5
+               },
+               {
+                  "name":"Sug",
+                  "amount":1
+               },
+               {
+                  "name":"Sugväska",
+                  "amount":1
+               },
+               {
+                  "name":"Svalgtub, strlk.2",
+                  "amount":1
+               },
+               {
+                  "name":"Svalgtub, strlk.4",
+                  "amount":1
+               },
+               {
+                  "name":"Rakhyvel",
+                  "amount":2
+               },
+               {
+                  "name":"Defibrillator",
+                  "amount":1
+               },
+               {
+                  "name":"Elektrodplattor",
                   "amount":1
                }
+               
             ]
          }
       ],
       "info":{
          "warning":[
-            "?"
+            "säkra arbetsplatsen"
          ],
          "help":[
             "kontrollera munhålan",
-            "?"
+            "skapa utrymme för arbete"
          ]
       },
       "properties":{
          "weight":{
             "text":"vikt",
-            "value":21,
-            "unit":"kg"
+            "value":0,
+            "unit":"?"
          }
       }
    },
@@ -377,7 +427,7 @@
       "id":1011,
       "contains":[
          {
-            "section_name":"hytt",
+            "section_name":"Hytt",
             "section_items":[
                {
                   "name":"andningsskydd",
@@ -486,7 +536,7 @@
             ]
          },
          {
-            "section_name":"fack 1",
+            "section_name":"Fack 1",
             "section_items":[
                {
                   "name":"JT-Pack",
@@ -611,7 +661,7 @@
             ]
          },
          {
-            "section_name":"fack 2",
+            "section_name":"Fack 2",
             "section_items":[
                {
                   "name":"Borrmaskin",
@@ -732,7 +782,7 @@
             ]
          },
          {
-            "section_name":"fack 3",
+            "section_name":"Fack 3",
             "section_items":[
                {
                   "name":"Brandposthuvud",
@@ -797,7 +847,7 @@
             ]
          },
          {
-            "section_name":"fack 4",
+            "section_name":"Fack 4",
             "section_items":[
                {
                   "name":"Holmatropump",
@@ -906,7 +956,7 @@
             ]
          },
          {
-            "section_name":"fack 5",
+            "section_name":"Fack 5",
             "section_items":[
                {
                   "name":"Grenrör TA441",
@@ -975,7 +1025,7 @@
             ]
          },
          {
-            "section_name":"fack 6",
+            "section_name":"Fack 6",
             "section_items":[
                {
                   "name":"Pikyxa",
@@ -1108,7 +1158,7 @@
             ]
          },
          {
-            "section_name":"fack 7",
+            "section_name":"Fack 7",
             "section_items":[
                {
                   "name":"Regnkappa",
@@ -1165,7 +1215,7 @@
             ]
          },
          {
-            "section_name":"fack 8",
+            "section_name":"Fack 8",
             "section_items":[
                {
                   "name":"Fläkt",
@@ -1242,7 +1292,7 @@
             ]
          },
          {
-            "section_name":"tak",
+            "section_name":"Tak",
             "section_items":[
                {
                   "name":"Hansabräda",
@@ -1311,10 +1361,14 @@
       ],
       "info":{
          "warning":[
-            "slangbrott vid högatrycka kan orsaka stor skada"
+            "slangbrott vid högatrycka kan orsaka stor skada",
+            "slangar fryser vid kallt väder",
+            "uppmärksamma risker att bli inparkerad"
          ],
          "help":[
-            ""
+            "använd hörselskydd",
+            "säkra vatten tidigt",
+            "förbered för anslutande styrkor"
          ]
       },
       "properties":{
@@ -1335,13 +1389,18 @@
          },
          "weight":{
             "text":"vikt",
-            "value":1,
+            "value":15.8,
             "unit":"ton"
          },
          "height":{
             "text":"höjd",
-            "value":3.2,
+            "value":3,
             "unit":"m"
+         },
+         "axle_load":{
+            "text":"axeltryck",
+            "value":9.1,
+            "unit":"ton"
          }
       }
    },
@@ -1350,48 +1409,16 @@
       "id":1012,
       "contains":[
          {
-            "section_name":"hytt",
+            "section_name":"Hytt",
             "section_items":[
                {
                   "name":"andningsskydd",
-                  "amount":5
-               },
-               {
-                  "name":"passlarm",
-                  "amount":3
-               },
-               {
-                  "name":"IR-Kamera Flir E6",
-                  "amount":1
-               },
-               {
-                  "name":"IR-kamera Flir",
                   "amount":2
                },
                {
-                  "name":"Hållar & X-tra batteri Flir",
-                  "amount":2
-               },
-               {
-                  "name":"Säkerhetslina Flir",
-                  "amount":2
-               },
-               {
-                  "name":"Hållare rengöringsduk Flir",
-                  "amount":2
-               },
-               {
-                  "name":"Söklina",
-                  "amount":1
-               },
-               {
-                  "name":"Rakel handradio",
-                  "amount":8
-               },
-               {
-                  "name":"Handlyckta RD",
-                  "amount":4
-               },
+                   "name":"Handlyckta RD",
+                   "amount":2
+                },
                {
                   "name":"Handlyckta stav",
                   "amount":1
@@ -1401,23 +1428,11 @@
                   "amount":1
                },
                {
-                  "name":"Farligt gods-pärmar",
-                  "amount":5
-               },
-               {
                   "name":"Gasmätare",
                   "amount":1
                },
                {
                   "name":"Kirurghandskar",
-                  "amount":1
-               },
-               {
-                  "name":"Ögondusch med hållare",
-                  "amount":1
-               },
-               {
-                  "name":"Grindnyckelväska",
                   "amount":1
                },
                {
@@ -1429,24 +1444,20 @@
                   "amount":1
                },
                {
-                  "name":"Insatsplaner",
-                  "amount":1
-               },
-               {
-                  "name":"Indekeringspapper",
+                  "name":"Avståndsmätare",
                   "amount":1
                },
                {
                   "name":"Varselvästar",
-                  "amount":5
+                  "amount":2
                },
                {
-                  "name":"Isbroddar",
-                  "amount":5
+                  "name":"Halvmask",
+                  "amount":2
                },
                {
                   "name":"Skyddsmask M98",
-                  "amount":7
+                  "amount":2
                },
                {
                   "name":"Tankkortsfolder",
@@ -1459,179 +1470,108 @@
             ]
          },
          {
-            "section_name":"fack 1",
+            "section_name":"Högskåp",
             "section_items":[
                {
-                  "name":"JT-Pack",
+                  "name":"Andningsskydd",
                   "amount":2
                },
                {
-                  "name":"Slangkasseter 42mm",
+                  "name":"Handlykta",
+                  "amount":1
+               },
+               {
+                  "name":"Skyffel",
+                  "amount":1
+               },
+               {
+                  "name":"Aluminiumspett",
+                  "amount":1
+               },
+               {
+                  "name":"Takkoger",
                   "amount":2
                },
                {
-                  "name":"Smalslang 42mm",
-                  "amount":10
-               },
-               {
-                  "name":"Slangkasseter 63mm",
-                  "amount":8
-               },
-               {
-                  "name":"Grovslang 63mm",
-                  "amount":8
-               },
-               {
-                  "name":"Rökdykarkorg 42mm",
+                  "name":"Skarpyxa",
                   "amount":2
                },
                {
-                  "name":"Slanghållare",
-                  "amount":2
-               },
-               {
-                  "name":"Slangbinda 63mm",
-                  "amount":2
-               },
-               {
-                  "name":"Slangbinda 42mm",
-                  "amount":2
-               },
-               {
-                  "name":"Grenrör TA441",
+                  "name":"Fogsvans",
                   "amount":1
                },
                {
-                  "name":"Ridårör AWG",
+                  "name":"Vattenkanon",
                   "amount":1
                },
                {
-                  "name":"Grenrör 42 till 42",
-                  "amount":2
-               },
-               {
-                  "name":"Grenrör 63 till 42",
-                  "amount":2
-               },
-               {
-                  "name":"Byxrör med kläpp",
-                  "amount":1
-               },
-               {
-                  "name":"Övergångslock",
-                  "amount":4
-               },
-               {
-                  "name":"Strålrör TA462 (enhet)",
-                  "amount":1
-               },
-               {
-                  "name":"Strålrör TA461(kort enhet)",
-                  "amount":2
-               },
-               {
-                  "name":"Handfighter 75l",
-                  "amount":1
-               },
-               {
-                  "name":"TFT Ultimatic fast inlopp",
-                  "amount":2
-               },
-               {
-                  "name":"TFT Ultimatic ledat inlopp",
-                  "amount":1
-               },
-               {
-                  "name":"TFT Ultimatic Trigger",
-                  "amount":1
-               },
-               {
-                  "name":"TFT Jetmatic",
-                  "amount":1
-               },
-               {
-                  "name":"Skumrör kombi 400l/min",
-                  "amount":1
-               },
-               {
-                  "name":"Mellaninjektor",
-                  "amount":1
-               },
-               {
-                  "name":"Quadrafog",
-                  "amount":1
-               },
-               {
-                  "name":"AWG adapter",
-                  "amount":1
-               },
-               {
-                  "name":"Slangrullare",
-                  "amount":1
-               },
-               {
-                  "name":"Stödben kombistege",
+                  "name":"Arbetsbelysning",
                   "amount":2
                },
                {
                   "name":"Transportlåda",
+                  "amount":1
+               },
+               {
+                  "name":"Teleskopstång",
+                  "amount":1
+               },
+               {
+                  "name":"Storkrok",
+                  "amount":1
+               },
+               {
+                  "name":"PP-lina",
+                  "amount":1
+               },
+               {
+                  "name":"AO väska",
                   "amount":2
                },
                {
-                  "name":"Dimspikväska",
+                  "name":"Ögondusch",
+                  "amount":1
+               },
+               {
+                  "name":"Takset",
+                  "amount":2
+               }
+            ]
+         },
+         {
+            "section_name":"Podieskåp",
+            "section_items":[
+               {
+                  "name":"Stormlina",
+                  "amount":2
+               },
+               {
+                  "name":"Rundslingskrok",
+                  "amount":1
+               },
+               {
+                  "name":"Lyftsling",
+                  "amount":2
+               },
+               {
+                  "name":"Korglåda",
                   "amount":1
                }
             ]
          },
          {
-            "section_name":"fack 2",
+            "section_name":"Fack 1",
             "section_items":[
-               {
-                  "name":"Borrmaskin",
-                  "amount":1
-               },
-               {
-                  "name":"Laddare",
-                  "amount":2
-               },
-               {
-                  "name":"Extrabatteri",
-                  "amount":2
-               },
-               {
-                  "name":"TIN borr",
-                  "amount":1
-               },
-               {
-                  "name":"Borrsats",
-                  "amount":1
-               },
-               {
-                  "name":"Bitssats",
-                  "amount":1
-               },
-               {
-                  "name":"Universalnyckel",
-                  "amount":1
-               },
-               {
-                  "name":"Vinkelslip (batteri)",
-                  "amount":1
-               },
-               {
-                  "name":"Kapskiva, vinkelslip",
-                  "amount":2
-               },
                {
                   "name":"Motorkap",
                   "amount":1
                },
                {
                   "name":"Kapskiva, motorkap",
-                  "amount":1
+                  "amount":2
                },
                {
-                  "name":"Cormantklinga, motorkap",
+                  "name":"Räddningssåg",
                   "amount":1
                },
                {
@@ -1643,19 +1583,23 @@
                   "amount":1
                },
                {
-                  "name":"Tigersåg (batteri)",
+                  "name":"Snickarbälte",
                   "amount":1
                },
                {
-                  "name":"Tigersågsblad, universal",
+                  "name":"Hörselskydd",
                   "amount":2
                },
                {
-                  "name":"Såghjälm (plastvisir)",
+                  "name":"Skyddsglasögon",
+                  "amount":2
+               },
+               {
+                  "name":"Såghjälm, plastvisir",
                   "amount":1
                },
                {
-                  "name":"Såghjälm (nätvisir)",
+                  "name":"Såghjälm, nätvisir",
                   "amount":1
                },
                {
@@ -1667,501 +1611,78 @@
                   "amount":1
                },
                {
-                  "name":"Fällkil",
-                  "amount":2
-               },
-               {
-                  "name":"Hörselskydd",
-                  "amount":3
-               },
-               {
-                  "name":"Skyddsglasögon",
-                  "amount":5
-               },
-               {
-                  "name":"Munskydd, engångs",
-                  "amount":10
-               },
-               {
-                  "name":"Häftapparat",
+                  "name":"Verktygsväska",
                   "amount":1
                },
                {
-                  "name":"Häftklammer",
+                  "name":"Pulversläckare",
                   "amount":1
                },
                {
-                  "name":"Takset",
-                  "amount":2
-               },
-               {
-                  "name":"Storkrok",
+                  "name":"Skumsläckare",
                   "amount":1
                },
                {
-                  "name":"Plastback",
-                  "amount":3
-               }
-            ]
-         },
-         {
-            "section_name":"fack 3",
-            "section_items":[
-               {
-                  "name":"Brandposthuvud",
-                  "amount":1
-               },
-               {
-                  "name":"Brandpostnyckel",
-                  "amount":1
-               },
-               {
-                  "name":"Servisnyckel",
-                  "amount":1
-               },
-               {
-                  "name":"Brandpostpump",
-                  "amount":1
-               },
-               {
-                  "name":"Pytsspruta",
-                  "amount":1
-               },
-               {
-                  "name":"Pulverspik set",
-                  "amount":1
-               },
-               {
-                  "name":"Pulversläckare 12kg",
-                  "amount":1
-               },
-               {
-                  "name":"Kolsyresläckare",
-                  "amount":1
-               },
-               {
-                  "name":"Tvålhållare",
-                  "amount":1
-               },
-               {
-                  "name":"Pappershållare",
-                  "amount":1
-               },
-               {
-                  "name":"Länspump",
-                  "amount":1
-               },
-               {
-                  "name":"Grovslang 63mm, kort",
-                  "amount":1
-               },
-               {
-                  "name":"Soteldsutrustning",
-                  "amount":1
-               },
-               {
-                  "name":"Hink",
-                  "amount":2
-               },
-               {
-                  "name":"Metalldetektor",
+                  "name":"Elkabel nöddrift",
                   "amount":1
                }
             ]
          },
          {
-            "section_name":"fack 4",
+            "section_name":"Fack 2",
             "section_items":[
                {
-                  "name":"Holmatropump",
+                  "name":"Gummerad grovslang 63mm",
                   "amount":1
                },
                {
-                  "name":"Holmatroslang",
+                  "name":"Gummerad smalslang 42mm",
+                  "amount":1
+               },
+               {
+                  "name":"Grenrör AWG 2112",
+                  "amount":1
+               },
+               {
+                  "name":"Grenrör AWG 222",
+                  "amount":1
+               },
+               {
+                  "name":"TFT Ultimatic, fast inlopp",
+                  "amount":1
+               },
+               {
+                  "name":"TFT Jetmatic",
+                  "amount":1
+               },
+               {
+                  "name":"Dimspiksväska",
+                  "amount":1
+               }
+            ]
+         },
+         {
+            "section_name":"Fack 3",
+            "section_items":[
+               {
+                  "name":"Brandgasfläkt",
+                  "amount":1
+               }
+            ]
+         },
+         {
+            "section_name":"Fack 4",
+            "section_items":[
+               {
+                  "name":"Kabelrulle",
                   "amount":2
-               },
-               {
-                  "name":"Sax, Holmatro",
-                  "amount":1
-               },
-               {
-                  "name":"Spridare",
-                  "amount":1
-               },
-               {
-                  "name":"Bändare",
-                  "amount":1
-               },
-               {
-                  "name":"Teleskopbändare",
-                  "amount":1
-               },
-               {
-                  "name":"Pallningsstöd (trappor)",
-                  "amount":2
-               },
-               {
-                  "name":"Cross-support",
-                  "amount":1
-               },
-               {
-                  "name":"Krycka, bändare",
-                  "amount":1
-               },
-               {
-                  "name":"Förlängning, bändare",
-                  "amount":1
-               },
-               {
-                  "name":"Pressening",
-                  "amount":1
-               },
-               {
-                  "name":"Splitterskydd",
-                  "amount":1
-               },
-               {
-                  "name":"Glassåg",
-                  "amount":1
-               },
-               {
-                  "name":"Bälteskniv",
-                  "amount":1
-               },
-               {
-                  "name":"Litet koben",
-                  "amount":1
-               },
-               {
-                  "name":"Kabeltång",
-                  "amount":1
-               },
-               {
-                  "name":"Verktygsväska, holmatro",
-                  "amount":1
-               },
-               {
-                  "name":"Kantskydd",
-                  "amount":10
-               },
-               {
-                  "name":"Tryckluftsmunstycke",
-                  "amount":1
-               },
-               {
-                  "name":"Stöttor",
-                  "amount":2
-               },
-               {
-                  "name":"Blinksats TF-AA",
-                  "amount":1
                },
                {
                   "name":"Varningstriangel",
                   "amount":2
                },
                {
-                  "name":"Traffic led lampa",
-                  "amount":2
-               },
-               {
-                  "name":"Kupévärmare",
-                  "amount":1
-               },
-               {
-                  "name":"Rörstryparväska",
-                  "amount":1
-               },
-               {
-                  "name":"Handpump, rörstrypning",
-                  "amount":1
-               }
-            ]
-         },
-         {
-            "section_name":"fack 5",
-            "section_items":[
-               {
-                  "name":"Grenrör TA441",
-                  "amount":1
-               },
-               {
-                  "name":"Övergångslock",
-                  "amount":1
-               },
-               {
-                  "name":"Tappslang",
-                  "amount":1
-               },
-               {
-                  "name":"Smalslang 42mm",
-                  "amount":1
-               },
-               {
-                  "name":"Grovslang 63mm",
-                  "amount":1
-               },
-               {
-                  "name":"Betongborr 22mm",
-                  "amount":1
-               },
-               {
-                  "name":"Träborr 22mm",
-                  "amount":1
-               },
-               {
-                  "name":"Strålrör AWG one seven",
-                  "amount":2
-               },
-               {
-                  "name":"Munstycke 25mm AWG one seven",
-                  "amount":2
-               },
-               {
-                  "name":"Munstycke 32mm AWG one seven",
-                  "amount":2
-               },
-               {
-                  "name":"Munstycke dim AWG one seven",
-                  "amount":1
-               },
-               {
-                  "name":"Släckspett",
-                  "amount":2
-               },
-               {
-                  "name":"Dimspik attack, förhöjt lågtryck",
-                  "amount":1
-               },
-               {
-                  "name":"Dimspik begrännsning, förhöjt lågtryck",
-                  "amount":1
-               },
-               {
-                  "name":"Strålrör G-Force, förhöjt lågtryck",
-                  "amount":1
-               },
-               {
-                  "name":"Strålrör Unifire v10",
-                  "amount":1
-               }
-            ]
-         },
-         {
-            "section_name":"fack 6",
-            "section_items":[
-               {
-                  "name":"Pikyxa",
-                  "amount":1
-               },
-               {
-                  "name":"Räddningsbår",
-                  "amount":1
-               },
-               {
-                  "name":"Räddningsbår, kort",
-                  "amount":1
-               },
-               {
-                  "name":"Tamp, räddningsbår",
-                  "amount":1
-               },
-               {
-                  "name":"Spett",
-                  "amount":1
-               },
-               {
-                  "name":"Pinch-spett",
-                  "amount":1
-               },
-               {
-                  "name":"Dörrforceringsväska",
-                  "amount":1
-               },
-               {
-                  "name":"Mini ram",
-                  "amount":1
-               },
-               {
-                  "name":"Skarpyxa",
-                  "amount":1
-               },
-               {
-                  "name":"Fogsvans",
-                  "amount":1
-               },
-               {
-                  "name":"Rörtång",
-                  "amount":1
-               },
-               {
-                  "name":"Bultsax",
-                  "amount":1
-               },
-               {
-                  "name":"Densotejp",
-                  "amount":1
-               },
-               {
-                  "name":"Träpluggsväska",
-                  "amount":1
-               },
-               {
-                  "name":"Silvertejp",
-                  "amount":2
-               },
-               {
-                  "name":"Spännband",
-                  "amount":2
-               },
-               {
-                  "name":"Snickarbälte",
-                  "amount":1
-               },
-               {
-                  "name":"Verktygsväska",
-                  "amount":1
-               },
-               {
-                  "name":"Hissnyckelväska",
-                  "amount":1
-               },
-               {
-                  "name":"Kofot",
-                  "amount":1
-               },
-               {
-                  "name":"Lyftkuddesats",
-                  "amount":1
-               },
-               {
-                  "name":"Slägga",
-                  "amount":1
-               },
-               {
-                  "name":"PP-Lina",
-                  "amount":1
-               },
-               {
-                  "name":"Nyckelsats, rökluckor",
-                  "amount":1
-               },
-               {
-                  "name":"Räddningskrok",
-                  "amount":1
-               },
-               {
-                  "name":"Gripsökare",
-                  "amount":1
-               },
-               {
-                  "name":"Kniv, hakstötta",
-                  "amount":1
-               },
-               {
-                  "name":"Frånskiljarkrok",
-                  "amount":1
-               },
-               {
-                  "name":"Absolhink",
-                  "amount":1
-               },
-               {
-                  "name":"Öskar",
-                  "amount":1
-               },
-               {
-                  "name":"Sprinklertångset",
-                  "amount":1
-               },
-               {
-                  "name":"Stegjustering",
-                  "amount":1
-               }
-            ]
-         },
-         {
-            "section_name":"fack 7",
-            "section_items":[
-               {
-                  "name":"Regnkappa",
-                  "amount":1
-               },
-               {
-                  "name":"Ambulansfilt",
-                  "amount":4
-               },
-               {
-                  "name":"Liksäck",
-                  "amount":2
-               },
-               {
-                  "name":"Släpbår",
-                  "amount":2
-               },
-               {
-                  "name":"Saneringsväska",
-                  "amount":1
-               },
-               {
-                  "name":"AO väska",
-                  "amount":5
-               },
-               {
-                  "name":"Smittskyddsväska",
-                  "amount":1
-               },
-               {
-                  "name":"Riskavfallsväska",
-                  "amount":1
-               },
-               {
-                  "name":"Bubbelplast",
-                  "amount":2
-               },
-               {
-                  "name":"Ytbärgarväska",
-                  "amount":1
-               },
-               {
-                  "name":"Livräddningstorped",
-                  "amount":1
-               },
-               {
-                  "name":"Hansalina",
-                  "amount":1
-               },
-               {
-                  "name":"Förplägnadsväska",
-                  "amount":1
-               }
-            ]
-         },
-         {
-            "section_name":"fack 8",
-            "section_items":[
-               {
-                  "name":"Fläkt",
-                  "amount":1
-               },
-               {
-                  "name":"Avgasslang, fläkt",
-                  "amount":1
-               },
-               {
-                  "name":"Plastfolierulle",
-                  "amount":1
-               },
-               {
-                  "name":"Handlyckta",
-                  "amount":1
-               },
-               {
-                  "name":"Kabelrulle",
-                  "amount":2
-               },
-               {
-                  "name":"Arbetsbelysning",
+                  "name":"Traffic led",
                   "amount":2
                },
                {
@@ -2169,101 +1690,58 @@
                   "amount":1
                },
                {
-                  "name":"Stänkskydd, kemdyk",
+                  "name":"Plaststrumpa",
+                  "amount":1
+               },
+               {
+                  "name":"Rökdykarlina",
+                  "amount":1
+               },
+               {
+                  "name":"Hoppkude SP16",
+                  "amount":1
+               },
+               {
+                  "name":"Luftflaska 300bar",
+                  "amount":1
+               }
+            ]
+         },
+         {
+            "section_name":"Vridtorn",
+            "section_items":[
+               {
+                  "name":"Äntringstege",
+                  "amount":1
+               },
+               {
+                  "name":"Takstege",
                   "amount":3
-               },
-               {
-                  "name":"Sopsäcksrulle",
-                  "amount":1
-               },
-               {
-                  "name":"Tunnelbanelåda, lyft",
-                  "amount":1
-               },
-               {
-                  "name":"Tunnelbanelåda, jordning",
-                  "amount":1
-               },
-               {
-                  "name":"RDL-väska",
-                  "amount":1
-               },
-               {
-                  "name":"Ljusslinga",
-                  "amount":1
-               },
-               {
-                  "name":"RD-lina",
-                  "amount":2
-               },
-               {
-                  "name":"Tätting",
-                  "amount":1
-               },
-               {
-                  "name":"Presenning",
-                  "amount":1
-               },
-               {
-                  "name":"Spillbag",
-                  "amount":2
-               },
-               {
-                  "name":"Brunnstätare",
-                  "amount":1
                }
             ]
          },
          {
-            "section_name":"tak",
+            "section_name":"Sida",
             "section_items":[
                {
-                  "name":"Hansabräda",
-                  "amount":1
+                  "name":"Pallningsplattor höger",
+                  "amount":2
                },
                {
-                  "name":"Linrulle",
-                  "amount":1
-               },
-               {
-                  "name":"Hakstötta",
-                  "amount":1
-               },
-               {
-                  "name":"Ispik",
-                  "amount":1
-               },
-               {
-                  "name":"Teleskopstång",
-                  "amount":1
+                  "name":"Pallningsplattor vänster",
+                  "amount":2
                }
             ]
          },
          {
-            "section_name":"Mellan hytt och skåp",
+            "section_name":"Bak",
             "section_items":[
                {
-                  "name":"Sopkvast",
-                  "amount":2
-               },
-               {
-                  "name":"Grep",
+                  "name":"Stoppkloss höger",
                   "amount":1
                },
                {
-                  "name":"Snöskyffel",
-                  "amount":1
-               },
-               {
-                  "name":"Spade",
-                  "amount":1
-               },
-               {
-                  "name":"Vattenrakor",
-                  "amount":2
-               },
-               {
-                  "name":"Kombistege",
+                  "name":"Stoppkloss vänster",
                   "amount":1
                }
             ]
@@ -2272,11 +1750,11 @@
             "section_name":"Övrigt",
             "section_items":[
                {
-                  "name":"Farthinder",
+                  "name":"Fallskyddsblock",
                   "amount":1
                },
                {
-                  "name":"Livboj",
+                  "name":"Farthinder",
                   "amount":1
                }
             ]
@@ -2284,39 +1762,87 @@
       ],
       "info":{
          "warning":[
-            "slangbrott vid högatrycka kan orsaka stor skada"
+            "försiktighet vid dåligt väder",
+            "akta kraftig lutande underlag",
+            "använd fallskydd"
          ],
          "help":[
-            ""
+            "Förbered verktyg på marken",
+            "Tänk nog igenom insatsen behov och lasta korgen därefter"
          ]
       },
       "properties":{
-         "water_tank":{
-            "text":"vattenmängd",
-            "value":2500,
-            "unit":"l"
+         "height":{
+            "text":"höjd",
+            "value":3.35,
+            "unit":"m"
          },
-         "foam_b_ar":{
-            "text":"skumvätska b-ar",
-            "value":100,
-            "unit":"l"
-         },
-         "foam_a":{
-            "text":"skumvätska a",
-            "value":100,
-            "unit":"l"
+         "axle_load":{
+            "text":"axeltryck",
+            "value":10,
+            "unit":"ton"
          },
          "weight":{
             "text":"vikt",
-            "value":1,
+            "value":17,
             "unit":"ton"
-         },
-         "height":{
-            "text":"höjd",
-            "value":3.2,
-            "unit":"m"
          }
       }
-   }
+   },
+   {
+      "name":"Hoppkudde sp16",
+      "id":1013,
+      "contains":[
+         {
+            "section_name":"Monterat",
+            "section_items":[
+               {
+                  "name":"Luftflaska 300bar",
+                  "amount":1
+               }
+            ]
+         },
+         {
+            "section_name":"Extra utrustning",
+            "section_items":[
+               {
+                  "name":"Luftflaska 300bar",
+                  "amount":1
+               }
+            ]
+         }
+      ],
+      "info":{
+         "warning":[
+            "max fallhöjd 16m",
+            "storlek 3,5m x 3,5m"
+         ],
+         "help":[
+            "använd riktkarl för att styra"
+         ]
+      },
+      "properties":{
+          "height":{
+             "text":"höjd",
+             "value":1.7,
+             "unit":"m"
+          },
+         "width":{
+            "text":"bredd",
+            "value":3.5,
+            "unit":"m"
+         },
+         "length":{
+            "text":"djup",
+            "value":3.5,
+            "unit":"m"
+         },
+         "weight":{
+            "text":"vikt",
+            "value":55,
+            "unit":"kg"
+         }
+      }
+   },
 ]
 

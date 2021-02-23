@@ -21,7 +21,7 @@ struct FireBaseModel {
     func fetchItemInfo(name:String,completion: @escaping (_ retrivedObject:InventoryItem) -> Void){
         
 //        let document = identifiableObjects.document("\(name.lowercased())")
-        let document = identifiableObjects.document("släckbil 1310")
+        let document = identifiableObjects.document("\(name)")
         document.getDocument{(doc, error) in
             let result = Result {
                 try doc?.data(as: InventoryItem.self)

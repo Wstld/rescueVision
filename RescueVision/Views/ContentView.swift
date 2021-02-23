@@ -11,14 +11,22 @@ import CoreData
 
 struct ContentView: View {
     
+    //swipedirections
+    @State private var isSideSwiping:Bool = false
+    @State private var isSwiping:Bool = false
+    
+    //infomenu state
+    @State var menuIsExposed:Bool = false
+    
     //Core data implementation. (move to Viewmodel?)
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: [])
     var tools: FetchedResults<Tool>
     
     //Offset value for info menu
-    @State private var offsetValHeigth:CGFloat = UIScreen.main.bounds.height/1.5
+    @State private var offsetValHeigth:CGFloat = UIScreen.main.bounds.height - 140
     @State private var offsetValWidth:CGFloat = 0
+    private let lowestOffestValue:CGFloat = UIScreen.main.bounds.height - 140
     
     //FocusRect sizing
     @State private var focusRectSize:CGFloat = 10
@@ -43,6 +51,7 @@ struct ContentView: View {
                             self.focusRectSize = focusRectFullSize
                         }
                         viewModel.firebaseModel.uploadJSONtoFireBase(objects: ModelJsonData().invetoryList)
+                       
                     })
                     if viewModel.loadingObject{
                         VStack{
@@ -59,9 +68,8 @@ struct ContentView: View {
             //  Info menu appears on identified .
             
             if viewModel.showInfo {
-                
                 ZStack() {
-                    SwipeInfoMenu(identifiedObject: viewModel.idObj) //should come from viewmodel.
+                    SwipeInfoMenu(identifiedObject: viewModel.idObj,menuIsExposed: $menuIsExposed)
                         .ignoresSafeArea()
                         .cornerRadius(20)
                 }
@@ -70,52 +78,68 @@ struct ContentView: View {
                 .gesture(DragGesture()
                             .onChanged({(value) in
                                 //swipe sideways.
+                                if !isSwiping {
                                 if value.translation.width > 50 || value.translation.width < -50{
+                                    self.isSideSwiping = true
                                     withAnimation(.linear(duration: 2)){
                                         offsetValWidth = value.translation.width
                                     }
                                 }
+                            }
                                 //Swipe up&down
+                                if !isSideSwiping {
                                 if value.translation.height > 0 {
+                                    //if menu is at at top.
+                                    self.isSwiping = true
                                     self.offsetValHeigth = value.translation.height
                                 }else{
-                                    //change offset on drag. upward. If block for stop draging at top.
+                                    //change offset on drag. upward. If block prevents overdrag at top.
                                     //value.translation.height negative count upward.
                                     if (self.offsetValHeigth > 50){
+                                        self.isSwiping = true
                                         let temp = UIScreen.main.bounds.height/1.5
-                                        //start value temp(284) + value(-1)...(-269)
+                                        //start value temp(444) + value(-1)...(-269)
                                         self.offsetValHeigth = temp + value.translation.height
                                     }
                                 }
-                                
+                                }
                             })
                             .onEnded({(value) in
+                                //reset swipevalues
+                                self.isSwiping = false
+                                self.isSideSwiping = false
                                 //enought sidways will toggle objectrecognition and kill info menu
                                 if value.translation.width > 130 || value.translation.width < -130 {
                                     viewModel.camera.toggleOutput()
                                     offsetValWidth = 0
-                                    offsetValHeigth = 50
+                                    offsetValHeigth = lowestOffestValue
+                                    menuIsExposed = false
                                 }
                                 //not enough will take it back to center of screen.
                                 if value.translation.width >=  0 && value.translation.width < 130 || value.translation.width <=  0 && value.translation.width > -130 {
                                     offsetValWidth = 0
+                                    menuIsExposed = true
                                 }
                                 //same control as above but for up&down
                                 if value.translation.height > 0{
                                     if value.translation.height > 100 {
-                                        self.offsetValHeigth = UIScreen.main.bounds.height/1.5
+                                        self.offsetValHeigth = lowestOffestValue
+                                        self.menuIsExposed = false
                                     }else {
                                         self.offsetValHeigth = 50
                                     }
                                 }else{
                                     if value.translation.height < -100 {
                                         self.offsetValHeigth = 50
+                                        self.menuIsExposed = true
                                     }else {
-                                        self.offsetValHeigth = UIScreen.main.bounds.height/1.5
+                                        self.offsetValHeigth = lowestOffestValue
                                     }
                                 }
                                 
-                            })).animation(.spring()).background(Color.clear)
+                            })).animation(.spring()).background(Color.clear).onAppear(perform: {
+                                print(lowestOffestValue)
+                            })
           
                 
             }

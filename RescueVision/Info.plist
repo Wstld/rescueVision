@@ -28,7 +28,12 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchScreen</key>
-	<dict/>
+	<dict>
+		<key>UIColorName</key>
+		<string>LaunchBG</string>
+		<key>UIImageName</key>
+		<string>RSQlogo</string>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>RescueVision will only work with camera enabled</string>
 	<key>UIRequiredDeviceCapabilities</key>
