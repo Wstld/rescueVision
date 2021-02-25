@@ -15,18 +15,18 @@ struct ItemListRow: View {
             HStack{
                 Text(title)
                     .font(.title2)
-                    .foregroundColor(.white)
+                    .foregroundColor(.textColor)
                     .fixedSize(horizontal: false, vertical: true)
                 Spacer()
                 if value != nil {
                 Text(value!)
                     .font(.title2)
-                    .foregroundColor(.white)
+                    .foregroundColor(.textColor)
             }
             }
             .padding(.top,10)
             .padding([.leading,.trailing],40)
-                HorizontalLine(color: .white)
+                HorizontalLine(color: .textColor)
                     .padding([.leading,.trailing],10)
                     .padding(.top,-1)
             }.frame(minWidth: UIScreen.main.bounds.width, maxWidth: UIScreen.main.bounds.width)

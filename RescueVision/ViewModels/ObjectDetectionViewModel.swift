@@ -26,7 +26,7 @@ final class ObjectDetectionViewModel: ObservableObject {
             //do network call if object is found.
             if foundObject {
                 self.loadingObject = true
-                //set timer for design purposes? 
+                 
                 self.firebaseModel.fetchItemInfo(name: objectName){
                     obj in
                     self.loadingObject = false
@@ -37,16 +37,7 @@ final class ObjectDetectionViewModel: ObservableObject {
                 //when found object is set back to false.
                 self.showInfo = foundObject
             }
-            
         })
-        
-
     }
-    
-    
-    func fetchObjectDetails(object:String){
-      print(object)
-    }
-    
 
 }

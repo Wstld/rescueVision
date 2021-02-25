@@ -18,10 +18,6 @@ struct ContentView: View {
     //infomenu state
     @State var menuIsExposed:Bool = false
     
-    //Core data implementation. (move to Viewmodel?)
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: [])
-    var tools: FetchedResults<Tool>
     
     //Offset value for info menu
     @State private var offsetValHeigth:CGFloat = UIScreen.main.bounds.height - 140

@@ -10,6 +10,7 @@ target 'RescueVision' do
 	# add pods for desired Firebase products
 	# https://firebase.google.com/docs/ios/setup#available-pods
 		pod 'Firebase/Firestore'
+		pod 'Firebase/Storage'
 		pod 'FirebaseFirestoreSwift', '~> 7.6-beta'
   target 'RescueVisionTests' do
     inherit! :search_paths

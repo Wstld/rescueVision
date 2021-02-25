@@ -19,6 +19,7 @@ struct SwipeInfoMenu: View {
        
                     Image(systemName: "chevron.up.circle")
                         .font(Font.system(.title))
+                        .foregroundColor(.textColor)
                         .padding(2)
                         .rotationEffect(.degrees(menuIsExposed ? 180 : 0))
                         .animation(.easeInOut)
@@ -27,15 +28,16 @@ struct SwipeInfoMenu: View {
                 Text(identifiedObject.name)
                     .fontWeight(.bold)
                     .font(.title)
-                    .foregroundColor(.white)
+                    .foregroundColor(.titleColor)
                     .padding(.leading,40)
                     .frame(width: screenWidth, height: 70, alignment: .leading)
-                    .background(Color.init(UIColor.gray))//add gradient?
-                HorizontalLine(color: .white)
+                    .background(Color.menuHeader)
+                HorizontalLine(color: .textColor)
                 
                 //show inventory.
                 ScrollView(){
                     if identifiedObject.contains != nil {
+                        
                     VStack(spacing:3){
                         Text("Innehåll")
                             .font(.title2)
@@ -43,9 +45,9 @@ struct SwipeInfoMenu: View {
                             .padding(.top,15)
                             .padding(.bottom,10)
                             .padding(.leading,25)
-                            .foregroundColor(.white)
+                            .foregroundColor(.titleColor)
                             .frame(width: screenWidth, alignment: .leading)
-                        HorizontalLine(color: .white)
+                        HorizontalLine(color: .textColor)
                         ScrollView{
                             VStack{
                                 ForEach(identifiedObject.contains!,id:\.self){ section in
@@ -56,7 +58,7 @@ struct SwipeInfoMenu: View {
                                         .padding(.top,15)
                                         .padding(.bottom,10)
                                         .padding(.leading,25)
-                                        .foregroundColor(.white)
+                                        .foregroundColor(.titleColor)
                                         .frame(width: screenWidth, alignment: .leading)
                                     }
                                     ForEach(section.sectionItems, id:\.self){ item in
@@ -67,11 +69,13 @@ struct SwipeInfoMenu: View {
                                 }
                             }
                             .padding(.top,15)
+                          
                             
                         }
                         .frame(width: screenWidth, height: screenWidth/2)
                         .padding(.bottom,15)
-                        .background(LinearGradient(gradient: Gradient(colors: [Color.init(UIColor.darkGray), Color.init(UIColor.gray),Color.init(UIColor.darkGray)]), startPoint: .top, endPoint: .bottom).shadow(radius: 5))
+                        .background(LinearGradient(gradient: Gradient(colors: [Color.menuBodyDark, Color.menuBody,Color.menuBodyDark]), startPoint: .top, endPoint: .bottom).shadow(radius: 5))
+                        
                     }
                     }
                         
@@ -83,9 +87,9 @@ struct SwipeInfoMenu: View {
                                     .padding(.top,15)
                                     .padding(.bottom,10)
                                     .padding(.leading,25)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.titleColor)
                                     .frame(width: screenWidth, alignment: .leading)
-                                HorizontalLine(color: .white)
+                                HorizontalLine(color: .textColor)
                                 ScrollView{
                                     VStack{
                                         ForEach(identifiedObject.properties,id:\.self){ prop in
@@ -97,7 +101,7 @@ struct SwipeInfoMenu: View {
                                 }
                                 .frame(width: screenWidth, height: screenWidth/3)
                                 .padding(.bottom,15)
-                                .background(LinearGradient(gradient: Gradient(colors: [Color.init(UIColor.darkGray), Color.init(UIColor.gray),Color.init(UIColor.darkGray)]), startPoint: .top, endPoint: .bottom).shadow(radius: 5))
+                                .background(LinearGradient(gradient: Gradient(colors: [Color.menuBodyDark, Color.menuBody,Color.menuBodyDark]), startPoint: .top, endPoint: .bottom).shadow(radius: 5))
                             }
             
                        //show video
@@ -116,9 +120,9 @@ struct SwipeInfoMenu: View {
                                 .padding(.top,15)
                                 .padding(.bottom,10)
                                 .padding(.leading,25)
-                                .foregroundColor(.white)
+                                .foregroundColor(.titleColor)
                                 .frame(width: screenWidth, alignment: .leading)
-                            HorizontalLine(color: .white)
+                            HorizontalLine(color: .textColor)
                             
                             if (identifiedObject.info?.warning) != nil {
                                 Text("Varning:")
@@ -127,7 +131,7 @@ struct SwipeInfoMenu: View {
                                     .padding(.top,15)
                                     .padding(.bottom,10)
                                     .padding(.leading,25)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.titleColor)
                                     .frame(width: screenWidth, alignment: .leading)
                                
                                 ForEach((identifiedObject.info!
@@ -141,7 +145,7 @@ struct SwipeInfoMenu: View {
                                     .padding(.top,15)
                                     .padding(.bottom,10)
                                     .padding(.leading,25)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.titleColor)
                                     .frame(width: screenWidth, alignment: .leading)
                                
                                 ForEach((identifiedObject.info!.help), id: \.self){ text in
@@ -150,25 +154,17 @@ struct SwipeInfoMenu: View {
                         }
                         .padding(.top,15)
                         .padding(.bottom,60)
-                        .background(Color.init(UIColor.darkGray).shadow(radius: 3))
+                        .background(Color.menuBody.shadow(radius: 3))
+                        
                     
                 }
                 
                 
             }
-            .background(Color.init(UIColor.darkGray))
+            .background(Color.menuBody)
             
             }
-    
     }
 
-struct SwipeInfoMenu_Previews: PreviewProvider {
-    static var previews: some View {
-        let data = ModelJsonData().invetoryList[10]
-        Group {
-//            SwipeInfoMenu(identifiedObject:data)
-        }
-    }
-}
 
 
