@@ -28,8 +28,11 @@ struct VideoFocusRect: View {
                 ZStack{
                     Text("focus on object")
                         .foregroundColor(.white)
-                }.offset(y:geo.size.height - geo.size.height - 40)
-            }.position(x: geo.size.width/2, y: geo.size.height/2)
+                }
+                .offset(y:geo.size.height - geo.size.height - 40)
+            }
+            .position(x: geo.size.width/2, y: geo.size.height/2)
+         
             
         }
     }

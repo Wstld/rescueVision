@@ -10,6 +10,7 @@ import CoreData
 
 
 struct ContentView: View {
+    @State var rotatePhoneIcon:Bool = false
     
     //swipedirections
     @State private var isSideSwiping:Bool = false
@@ -40,8 +41,7 @@ struct ContentView: View {
             })
             
             ZStack{
-                VideoFocusRect(size: focusRectSize, color: .red)
-                    .padding(.bottom,0)
+                VideoFocusRect(size: focusRectSize, color: viewModel.showInfo ? .red : .green)
                     .onAppear(perform: {
                         withAnimation(.linear(duration:0.5)){
                             self.focusRectSize = focusRectFullSize
@@ -49,17 +49,37 @@ struct ContentView: View {
                         viewModel.firebaseModel.uploadJSONtoFireBase(objects: ModelJsonData().invetoryList)
                        
                     })
+                //show loading
+                VStack{
                     if viewModel.loadingObject{
-                        VStack{
+                        
                         Text("loading object")
                             .foregroundColor(.white)
                         ActivitySpinner()
                             .frame(width: 80, height: 80, alignment: .center)
-                        }.offset(y: UIScreen.main.bounds.height/3)
+                        
                     }
+                // show turn phone when not loading or not showing info
+                    if !viewModel.loadingObject && !viewModel.showInfo{
+                        Spacer(minLength: UIScreen.main.bounds.height/3 * 2)
+                            Image(systemName: "iphone.homebutton")
+                                .rotationEffect(.degrees(rotatePhoneIcon ? -90 : 0))
+                                .padding(.top,15)
+                                .font(Font.system(.title))
+                                .animation(Animation.linear(duration: 1).repeatForever(autoreverses: true))
+                                .onAppear(perform: {
+                                    rotatePhoneIcon = true
+                                })
+                                .onDisappear(perform: {
+                                    rotatePhoneIcon = false
+                                })
+                        Spacer()
+                    }
+                    
+                }
                 
             }
-            .offset(y:geo.size.height - geo.size.height - 100)
+            
             
             //  Info menu appears on identified .
             
@@ -138,7 +158,13 @@ struct ContentView: View {
                                     }
                                 }
                                 
-                            })).animation(.spring()).background(Color.clear)
+                            }))
+                .animation(.spring()).background(Color.clear)
+                .onDisappear(perform: {
+                    //reset info menu position for next apperance
+                    offsetValHeigth = lowestOffestValue
+                    offsetValWidth = 0
+                })
           
                 
             }

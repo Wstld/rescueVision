@@ -80,7 +80,7 @@ class CameraModel: NSObject, ObservableObject,AVCaptureVideoDataOutputSampleBuff
             print("no buffer")
             return
         }
-        let imageRequestHandeler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .upMirrored, options: [:])
+        let imageRequestHandeler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .up, options: [:])
         do {
             try imageRequestHandeler.perform(self.requests)
         } catch  {

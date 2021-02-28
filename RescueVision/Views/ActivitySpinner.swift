@@ -26,7 +26,7 @@ struct ActivitySpinner: View {
         .frame(width: 80, height: 80)
         .background(Color.white)
         .cornerRadius(15)
-        .shadow(color: Color.white.opacity(0.3), radius: 5, x: 0, y: 5)
+        .shadow(color: Color.white.opacity(0.3), radius: 2, x: 0, y: 5)
         .shadow(color: Color.black.opacity(0.7), radius: 4, x: 0, y: 2)
         .onAppear(perform: {
             isAnimating = true

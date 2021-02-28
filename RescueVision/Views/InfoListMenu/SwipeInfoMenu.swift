@@ -34,8 +34,8 @@ struct SwipeInfoMenu: View {
                     .background(Color.menuHeader)
                 HorizontalLine(color: .textColor)
                 
-                //show inventory.
-                ScrollView(){
+                //main scrollview.
+                ScrollView(showsIndicators:false){
                     if identifiedObject.contains != nil {
                         
                     VStack(spacing:3){
@@ -90,7 +90,7 @@ struct SwipeInfoMenu: View {
                                     .foregroundColor(.titleColor)
                                     .frame(width: screenWidth, alignment: .leading)
                                 HorizontalLine(color: .textColor)
-                                ScrollView{
+                                ScrollView(showsIndicators:true){
                                     VStack{
                                         ForEach(identifiedObject.properties,id:\.self){ prop in
                                             ItemListRow(title: prop.text, value:"\( String(prop.value) + prop.unit)")
