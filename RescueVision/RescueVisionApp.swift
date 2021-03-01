@@ -29,7 +29,6 @@ extension Color {
     static let menuHeader = Color("MenuTitleBg")
     static let textColor = Color("BodyText")
     static let titleColor = Color("TitleText")
-    
 }
 
 class AppDelegate: NSObject, UIApplicationDelegate{

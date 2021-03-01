@@ -15,6 +15,7 @@
 		AD05F1DC25B751B300B56A6F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05F1DB25B751B300B56A6F /* Persistence.swift */; };
 		AD05F22A25B8B49100B56A6F /* video.MOV in Resources */ = {isa = PBXBuildFile; fileRef = AD05F22925B8B49000B56A6F /* video.MOV */; };
 		AD08411325D3DDBB00DE4134 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD08411225D3DDBB00DE4134 /* GoogleService-Info.plist */; };
+		AD08DF2925ED2C9D00807600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD88FDF625AEF6A600F51A15 /* Assets.xcassets */; };
 		AD0E882925BAB7A6008779F8 /* VideoUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0E882825BAB7A5008779F8 /* VideoUIView.swift */; };
 		AD0E884C25C2AE67008779F8 /* ModelJsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0E884B25C2AE67008779F8 /* ModelJsonData.swift */; };
 		AD4CE92825DC1FDA00B08D63 /* ActivitySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4CE92725DC1FDA00B08D63 /* ActivitySpinner.swift */; };
@@ -22,7 +23,6 @@
 		AD7BC3DF25D3F08C009C69B8 /* FireBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BC3DE25D3F08C009C69B8 /* FireBaseModel.swift */; };
 		AD88FDF325AEF6A500F51A15 /* RescueVisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD88FDF225AEF6A500F51A15 /* RescueVisionApp.swift */; };
 		AD88FDF525AEF6A500F51A15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD88FDF425AEF6A500F51A15 /* ContentView.swift */; };
-		AD88FDF725AEF6A600F51A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD88FDF625AEF6A600F51A15 /* Assets.xcassets */; };
 		AD88FDFA25AEF6A600F51A15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD88FDF925AEF6A600F51A15 /* Preview Assets.xcassets */; };
 		AD88FE0525AEF6A600F51A15 /* RescueVisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD88FE0425AEF6A600F51A15 /* RescueVisionTests.swift */; };
 		AD88FE1025AEF6A600F51A15 /* RescueVisionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD88FE0F25AEF6A600F51A15 /* RescueVisionUITests.swift */; };
@@ -429,9 +429,9 @@
 			files = (
 				AD88FDFA25AEF6A600F51A15 /* Preview Assets.xcassets in Resources */,
 				AD05F22A25B8B49100B56A6F /* video.MOV in Resources */,
-				AD88FDF725AEF6A600F51A15 /* Assets.xcassets in Resources */,
 				ADCA339725C2C96700A4F85F /* core.json in Resources */,
 				AD08411325D3DDBB00DE4134 /* GoogleService-Info.plist in Resources */,
+				AD08DF2925ED2C9D00807600 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

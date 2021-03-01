@@ -66,6 +66,7 @@ struct ContentView: View {
                                 .rotationEffect(.degrees(rotatePhoneIcon ? -90 : 0))
                                 .padding(.top,15)
                                 .font(Font.system(.title))
+                                .foregroundColor(.white)
                                 .animation(Animation.linear(duration: 1).repeatForever(autoreverses: true))
                                 .onAppear(perform: {
                                     rotatePhoneIcon = true
