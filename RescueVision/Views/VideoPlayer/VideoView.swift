@@ -6,26 +6,6 @@
 //
 
 import SwiftUI
-struct  PlayBtn: View {
-    @State private var isPlaying = false
-    var action: () -> Void
-    
-    var body: some View{
-        GeometryReader{ geo in
-            Image(systemName: "play.circle.fill")
-                .resizable()
-                .foregroundColor(.gray)
-                .opacity(0.7)
-                .frame(width:geo.size.width/2 , height: geo.size.width/2, alignment:.center)
-                .position(x: geo.size.width/2, y: geo.size.height/2)
-        }
-    }
-    private func btnTapped(){
-        isPlaying.toggle()
-        action()
-    }
-}
-
 
 struct VideoView: View {
     @StateObject var videoPlayer = VideoPlayerModel()
@@ -36,10 +16,12 @@ struct VideoView: View {
         GeometryReader{ geo in
             VStack {
                 ZStack{
+                    //show video
                     VideoPreview(videoPlayer: videoPlayer,videoURL: videoURL)
                         .onTapGesture {
                             videoPlayer.play()
                         }
+                    //show play btn.
                     if videoPlayer.isPlaying == false && videoPlayer.loading == false {
                     Image(systemName: "play.circle.fill")
                         .resizable()
@@ -51,6 +33,7 @@ struct VideoView: View {
                             videoPlayer.play()
                         }
                     }
+                    //show loading.
                     if videoPlayer.isPlaying == false && videoPlayer.loading == true{
                         ActivitySpinner()
                     }

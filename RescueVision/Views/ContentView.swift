@@ -46,7 +46,6 @@ struct ContentView: View {
                         withAnimation(.linear(duration:0.5)){
                             self.focusRectSize = focusRectFullSize
                         }
-                        viewModel.firebaseModel.uploadJSONtoFireBase(objects: ModelJsonData().invetoryList)
                     })
                 //show loading
                 VStack{
@@ -58,21 +57,21 @@ struct ContentView: View {
                             .frame(width: 80, height: 80, alignment: .center)
                         
                     }
-                // show turn phone when not loading or not showing info
+                    // show turn phone when not loading or not showing info
                     if !viewModel.loadingObject && !viewModel.showInfo{
                         Spacer(minLength: UIScreen.main.bounds.height/3 * 2)
-                            Image(systemName: "iphone.homebutton")
-                                .rotationEffect(.degrees(rotatePhoneIcon ? -90 : 0))
-                                .padding(.top,15)
-                                .font(Font.system(.title))
-                                .foregroundColor(.white)
-                                .animation(Animation.linear(duration: 1).repeatForever(autoreverses: true))
-                                .onAppear(perform: {
-                                    rotatePhoneIcon = true
-                                })
-                                .onDisappear(perform: {
-                                    rotatePhoneIcon = false
-                                })
+                        Image(systemName: "iphone.homebutton")
+                            .rotationEffect(.degrees(rotatePhoneIcon ? -90 : 0))
+                            .padding(.top,15)
+                            .font(Font.system(.title))
+                            .foregroundColor(.white)
+                            .animation(Animation.linear(duration: 1).repeatForever(autoreverses: true))
+                            .onAppear(perform: {
+                                rotatePhoneIcon = true
+                            })
+                            .onDisappear(perform: {
+                                rotatePhoneIcon = false
+                            })
                         Spacer()
                     }
                     
@@ -81,7 +80,7 @@ struct ContentView: View {
             }
             
             
-            //  Info menu appears on identified .
+            //Info menu appears on identified object.
             
             if viewModel.showInfo {
                 ZStack() {
@@ -95,29 +94,29 @@ struct ContentView: View {
                             .onChanged({(value) in
                                 //swipe sideways.
                                 if !isSwiping {
-                                if value.translation.width > 50 || value.translation.width < -50{
-                                    self.isSideSwiping = true
-                                    withAnimation(.linear(duration: 2)){
-                                        offsetValWidth = value.translation.width
+                                    if value.translation.width > 50 || value.translation.width < -50{
+                                        self.isSideSwiping = true
+                                        withAnimation(.linear(duration: 2)){
+                                            offsetValWidth = value.translation.width
+                                        }
                                     }
                                 }
-                            }
                                 //Swipe up&down
                                 if !isSideSwiping {
-                                if value.translation.height > 0 {
-                                    //if menu is at at top.
-                                    self.isSwiping = true
-                                    self.offsetValHeigth = value.translation.height
-                                }else{
-                                    //change offset on drag. upward. If block prevents overdrag at top.
-                                    //value.translation.height negative count upward.
-                                    if (self.offsetValHeigth > 50){
+                                    if value.translation.height > 0 {
+                                        //if menu is at at top.
                                         self.isSwiping = true
-                                        let temp = UIScreen.main.bounds.height/1.5
-                                        //start value temp(444) + value(-1)...(-269)
-                                        self.offsetValHeigth = temp + value.translation.height
+                                        self.offsetValHeigth = value.translation.height
+                                    }else{
+                                        //change offset on drag. upward. If block prevents overdrag at top.
+                                        //value.translation.height negative count upward.
+                                        if (self.offsetValHeigth > 50){
+                                            self.isSwiping = true
+                                            let temp = UIScreen.main.bounds.height/1.5
+                                            //start value temp(444) + value(-1)...(-269)
+                                            self.offsetValHeigth = temp + value.translation.height
+                                        }
                                     }
-                                }
                                 }
                             })
                             .onEnded({(value) in
@@ -129,9 +128,9 @@ struct ContentView: View {
                                     menuIsExposed = false
                                     offsetValWidth = 0
                                     offsetValHeigth = lowestOffestValue
-
+                                    
                                     viewModel.camera.toggleOutput()
-                                                                       
+                                    
                                 }
                                 //not enough will take it back to center of screen.
                                 if value.translation.width >=  0 && value.translation.width < 130 || value.translation.width <=  0 && value.translation.width > -130 {
@@ -165,7 +164,7 @@ struct ContentView: View {
                     offsetValHeigth = lowestOffestValue
                     offsetValWidth = 0
                 })
-          
+                
                 
             }
             

@@ -8,8 +8,9 @@
 import SwiftUI
 import AVKit
 
+//create and add camera preview layer to UIview.
 struct CameraPreview: UIViewRepresentable {
-  @ObservedObject var camera : CameraModel
+    var camera : CameraModel
     
     func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: UIScreen.main.bounds)

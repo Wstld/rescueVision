@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//actual cameraview to use in content.
+//checks auth and starts session on appear.
 struct CameraView: View {
     @EnvironmentObject var viewModel:ObjectDetectionViewModel
     var body: some View {
@@ -14,7 +16,6 @@ struct CameraView: View {
             CameraPreview(camera: viewModel.camera)
         }.onAppear(perform: {
             viewModel.camera.check()
-            //start session
             viewModel.camera.session.startRunning()
         })
     }

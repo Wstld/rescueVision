@@ -12,6 +12,7 @@ final class ObjectDetectionViewModel: ObservableObject {
     //models
     var camera:CameraModel = CameraModel()
     var firebaseModel = FireBaseModel()
+    var videoPlayer = VideoPlayerModel()
     
     @Published var showInfo:Bool = false
     @Published var loadingObject:Bool = false
