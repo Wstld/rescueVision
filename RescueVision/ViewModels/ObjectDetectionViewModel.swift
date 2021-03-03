@@ -36,9 +36,20 @@ final class ObjectDetectionViewModel: ObservableObject {
                  
                 self.firebaseModel.fetchItemInfo(name: objectName){
                     obj in
-                    self.loadingObject = false
-                    self.idObj = obj
-                    self.showInfo = foundObject
+                    
+                    if obj != nil{
+                        self.loadingObject = false
+                        self.idObj = obj
+                        self.showInfo = foundObject
+                    }
+                    
+                    else{
+                        //if object found not exists in DB, reset.
+                        self.loadingObject = false
+                        camera.toggleOutput()
+                    }
+                   
+                    
                 }
             }else{
                 //when found object is set back to false.

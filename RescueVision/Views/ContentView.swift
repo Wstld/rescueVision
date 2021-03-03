@@ -46,6 +46,7 @@ struct ContentView: View {
                         withAnimation(.linear(duration:0.5)){
                             self.focusRectSize = focusRectFullSize
                         }
+                        viewModel.firebaseModel.uploadJSONtoFireBase(objects: ModelJsonData().invetoryList)
                     })
                 //show loading
                 VStack{

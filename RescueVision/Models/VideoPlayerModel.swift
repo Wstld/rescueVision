@@ -41,8 +41,9 @@ class VideoPlayerModel: ObservableObject {
             }
         }
         
-        
+        //observer using "non combined" implementation.
         NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)
+        
         
         self.player.replaceCurrentItem(with: video)
     }
@@ -51,7 +52,7 @@ class VideoPlayerModel: ObservableObject {
     }
     
     func play(){
-        
+        //plays or pauses depending on status, resets on played to end.
         guard player.currentItem != nil else {
             return
         }

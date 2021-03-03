@@ -12,8 +12,7 @@ struct InventoryItem:Codable,Identifiable,Hashable {
     var info:InfoEntry?
 
     
-   
-
+    // custom decoder and encoder for JSON to FB and FB to Swift object.
     
     init(from decoder: Decoder) throws {
        let container = try decoder.container(keyedBy: CodingKeys.self)
