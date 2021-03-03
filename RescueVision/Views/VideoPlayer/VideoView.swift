@@ -40,7 +40,7 @@ struct VideoView: View {
                         .onTapGesture {
                             videoPlayer.play()
                         }
-                    if videoPlayer.isPlaying == false {
+                    if videoPlayer.isPlaying == false && videoPlayer.loading == false {
                     Image(systemName: "play.circle.fill")
                         .resizable()
                         .foregroundColor(.gray)
@@ -50,6 +50,9 @@ struct VideoView: View {
                         .onTapGesture {
                             videoPlayer.play()
                         }
+                    }
+                    if videoPlayer.isPlaying == false && videoPlayer.loading == true{
+                        ActivitySpinner()
                     }
                 }
             }

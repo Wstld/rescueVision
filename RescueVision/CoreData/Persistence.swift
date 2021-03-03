@@ -6,6 +6,7 @@
 //
 
 import CoreData
+//prep for coredata usages.
 
 struct PresistenceController{
     static let shared = PresistenceController()
@@ -13,7 +14,7 @@ struct PresistenceController{
     let container:NSPersistentContainer
     
     init() {
-        container = NSPersistentContainer(name: "FireTruckInventory")
+        container = NSPersistentContainer(name: "")
         
         container.loadPersistentStores { (storeDescription, error) in
             

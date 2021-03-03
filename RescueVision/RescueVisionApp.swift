@@ -11,14 +11,12 @@ import Firebase
 
 @main
 struct RescueVisionApp: App {
-    let presistenceController = PresistenceController.shared
     @StateObject var viewModel = ObjectDetectionViewModel()
     @UIApplicationDelegateAdaptor private var appDelegate:AppDelegate
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, presistenceController.container.viewContext)
                 .environmentObject(viewModel)
         }
     }

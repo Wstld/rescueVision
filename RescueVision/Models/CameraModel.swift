@@ -11,13 +11,17 @@ import Vision
 import Combine
 
 class CameraModel: NSObject, ObservableObject,AVCaptureVideoDataOutputSampleBufferDelegate {
+   
     var session = AVCaptureSession()
     var preview: AVCaptureVideoPreviewLayer!
+    private var output = AVCaptureVideoDataOutput()
+    
+    //name and status for DB look up.
     @Published var foundObjectName:String = ""
     @Published  var foundObject:Bool = false
     
     
-    private var output = AVCaptureVideoDataOutput()
+    
     private let outputQue:DispatchQueue = DispatchQueue(label: "videoOutputQue")
     private var bufferSize:CGSize = .zero
     private var requests = [VNRequest]()
@@ -29,8 +33,9 @@ class CameraModel: NSObject, ObservableObject,AVCaptureVideoDataOutputSampleBuff
                 continue
             }
             let topLableObservation = objectObservation.labels[0]
-            if topLableObservation.confidence > 0.8{
+            if topLableObservation.confidence > 0.9{
                 toggleOutput()
+                
                 self.foundObjectName = "\(topLableObservation.identifier)"
                 self.foundObject = true
                 
@@ -59,22 +64,18 @@ class CameraModel: NSObject, ObservableObject,AVCaptureVideoDataOutputSampleBuff
             let visionModel = try VNCoreMLModel(for: MLModel(contentsOf: url))
             let objectDetection = VNCoreMLRequest(model: visionModel, completionHandler: { (request, error) in
                 DispatchQueue.main.async(execute:{
-                    
                     if let result = request.results{
                         self.showRecognizedObj(result)
                     }
-                    
-                    
                 })
             })
             self.requests = [objectDetection]
-            
         } catch  {
             fatalError("model loading failed: \(error)")
         }
-        
     }
     
+    //feeds output to visionModel.
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
             print("no buffer")
@@ -89,11 +90,11 @@ class CameraModel: NSObject, ObservableObject,AVCaptureVideoDataOutputSampleBuff
     }
     
     func captureOutput(_ captureOutput: AVCaptureOutput, didDrop didDropSampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        //print("frame dropped")
+        //runs on every dorpped capture frame.
     }
     
+    //Check camera auth
     func check(){
-        //Check Auth
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
             setUp()
@@ -110,6 +111,8 @@ class CameraModel: NSObject, ObservableObject,AVCaptureVideoDataOutputSampleBuff
             return
         }
     }
+    
+    //Setup camera session.
     func setUp() {
         var input: AVCaptureDeviceInput!
         let videoDevice = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .back).devices.first
@@ -130,19 +133,25 @@ class CameraModel: NSObject, ObservableObject,AVCaptureVideoDataOutputSampleBuff
         
         if self.session.canAddOutput(output){
             self.session.addOutput(output)
+            
             // Setup output
+            //dont't fill up que while working
             output.alwaysDiscardsLateVideoFrames = true
+            
             output.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)]
             output.setSampleBufferDelegate(self, queue: outputQue)
         }
         
+        // start output connection
         let captureConnection = output.connection(with: .video)
         captureConnection?.isEnabled = true
         do {
             try videoDevice!.lockForConfiguration()
             let dimensions = CMVideoFormatDescriptionGetDimensions((videoDevice?.activeFormat.formatDescription)!)
+            //Set size of buffer
             bufferSize.width = CGFloat(dimensions.width)
             bufferSize.height = CGFloat(dimensions.height)
+            
             videoDevice!.unlockForConfiguration()
             
         } catch  {

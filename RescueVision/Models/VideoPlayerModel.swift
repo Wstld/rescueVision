@@ -8,24 +8,39 @@
 import Foundation
 import SwiftUI
 import AVKit
+import Combine
+
 class VideoPlayerModel: ObservableObject {
     @Published var player = AVPlayer()
     @Published var isPlaying = false
+    @Published var loading = false
+    private var itemObservation:AnyCancellable?
+    
     var layer = AVPlayerLayer()
-   
+    
     init() {
         layer.player = self.player
         layer.videoGravity = .resizeAspectFill
         layer.backgroundColor = CGColor.init(red: 169, green: 169, blue: 169, alpha: 1)
-        
-//        let videoSampleItem = AVPlayerItem(url: URL(string:"https://www.youtube.com/embed/Mp2Op0F8ULI")!)
-//        player.replaceCurrentItem(with: videoSampleItem)
     }
     
     func setVideo(videoURL:String){
+        //reset observer.
+        loading = true
+        itemObservation = nil
+        
         let urlSet = URL(string: videoURL)!
         let asset = AVAsset(url: urlSet)
         let video = AVPlayerItem(asset: asset)
+        
+        //observe change in player item status.
+        itemObservation = video.publisher(for: \.status).sink{
+            newstatus in
+            if newstatus == .readyToPlay{
+                self.loading = false
+            }
+        }
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)
         
@@ -36,9 +51,9 @@ class VideoPlayerModel: ObservableObject {
     }
     
     func play(){
-       
+        
         guard player.currentItem != nil else {
-            return //error handling for no item in player?
+            return
         }
         
         if isPlaying {
@@ -53,9 +68,6 @@ class VideoPlayerModel: ObservableObject {
         isPlaying = true
         player.play()
         
-    
-        
-        
     }
-
+    
 }

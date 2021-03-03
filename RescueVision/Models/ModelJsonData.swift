@@ -7,11 +7,11 @@
 
 import Foundation
 import Combine
+//generic JSON to Swift obj model.
 final class ModelJsonData:ObservableObject {
         @Published var invetoryList:[InventoryItem] = load("core.json")
     }
    
-    
     func load <T:Decodable>(_ filename:String) -> T {
         let data:Data
         guard let file = Bundle.main.url(forResource: filename, withExtension: nil)

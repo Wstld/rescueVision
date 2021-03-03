@@ -13,7 +13,6 @@
 		AD017FF025B9CA4D00D608F0 /* VideoPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD017FEF25B9CA4D00D608F0 /* VideoPlayerModel.swift */; };
 		AD017FF625B9CC8D00D608F0 /* VideoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD017FF525B9CC8D00D608F0 /* VideoPreview.swift */; };
 		AD05F1DC25B751B300B56A6F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05F1DB25B751B300B56A6F /* Persistence.swift */; };
-		AD05F22A25B8B49100B56A6F /* video.MOV in Resources */ = {isa = PBXBuildFile; fileRef = AD05F22925B8B49000B56A6F /* video.MOV */; };
 		AD08411325D3DDBB00DE4134 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD08411225D3DDBB00DE4134 /* GoogleService-Info.plist */; };
 		AD08DF2925ED2C9D00807600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD88FDF625AEF6A600F51A15 /* Assets.xcassets */; };
 		AD0E882925BAB7A6008779F8 /* VideoUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0E882825BAB7A5008779F8 /* VideoUIView.swift */; };
@@ -33,9 +32,7 @@
 		AD8C02D525B39F54008A7E8D /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8C02D425B39F54008A7E8D /* CameraModel.swift */; };
 		AD8C02E225B3A633008A7E8D /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8C02E125B3A633008A7E8D /* CameraPreview.swift */; };
 		ADAEE71825B5D64500FED8A6 /* VideoFocusRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAEE71725B5D64500FED8A6 /* VideoFocusRect.swift */; };
-		ADC1289725D30731001E6C66 /* YOLOv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = ADC1289625D30731001E6C66 /* YOLOv3.mlmodel */; };
 		ADCA339725C2C96700A4F85F /* core.json in Resources */ = {isa = PBXBuildFile; fileRef = ADCA339625C2C96700A4F85F /* core.json */; };
-		ADE8DE8025B73E960009EA90 /* FireTruckInventory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADE8DE7E25B73E950009EA90 /* FireTruckInventory.xcdatamodeld */; };
 		ADEB51F425C9DA7500DBB049 /* InventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEB51F325C9DA7400DBB049 /* InventoryItem.swift */; };
 		ADEB520025CAF51300DBB049 /* ObjectDetectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEB51FF25CAF51200DBB049 /* ObjectDetectionViewModel.swift */; };
 		ADEFC3F025B30E9F002A7D90 /* ItemListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEFC3EF25B30E9F002A7D90 /* ItemListRow.swift */; };
@@ -63,7 +60,6 @@
 		AD017FEF25B9CA4D00D608F0 /* VideoPlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerModel.swift; sourceTree = "<group>"; };
 		AD017FF525B9CC8D00D608F0 /* VideoPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreview.swift; sourceTree = "<group>"; };
 		AD05F1DB25B751B300B56A6F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		AD05F22925B8B49000B56A6F /* video.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.MOV; sourceTree = "<group>"; };
 		AD08411225D3DDBB00DE4134 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD0E882825BAB7A5008779F8 /* VideoUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoUIView.swift; sourceTree = "<group>"; };
 		AD0E884B25C2AE67008779F8 /* ModelJsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelJsonData.swift; sourceTree = "<group>"; };
@@ -89,9 +85,7 @@
 		AD8C02D425B39F54008A7E8D /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		AD8C02E125B3A633008A7E8D /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 		ADAEE71725B5D64500FED8A6 /* VideoFocusRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFocusRect.swift; sourceTree = "<group>"; };
-		ADC1289625D30731001E6C66 /* YOLOv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3.mlmodel; sourceTree = "<group>"; };
 		ADCA339625C2C96700A4F85F /* core.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = core.json; sourceTree = "<group>"; };
-		ADE8DE7F25B73E950009EA90 /* FireTruckInventory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FireTruckInventory.xcdatamodel; sourceTree = "<group>"; };
 		ADEB51F325C9DA7400DBB049 /* InventoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItem.swift; sourceTree = "<group>"; };
 		ADEB51FF25CAF51200DBB049 /* ObjectDetectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionViewModel.swift; sourceTree = "<group>"; };
 		ADEFC3EF25B30E9F002A7D90 /* ItemListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListRow.swift; sourceTree = "<group>"; };
@@ -147,18 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				AD89820425E8BF4A002161D9 /* RSQ1.mlmodel */,
-				ADC1289625D30731001E6C66 /* YOLOv3.mlmodel */,
-				AD0E884125C06949008779F8 /* Video */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		AD0E884125C06949008779F8 /* Video */ = {
-			isa = PBXGroup;
-			children = (
-				AD05F22925B8B49000B56A6F /* video.MOV */,
-			);
-			path = Video;
 			sourceTree = "<group>";
 		};
 		AD88FDE625AEF6A400F51A15 = {
@@ -264,7 +248,6 @@
 		ADE8DE7D25B73E610009EA90 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				ADE8DE7E25B73E950009EA90 /* FireTruckInventory.xcdatamodeld */,
 				AD05F1DB25B751B300B56A6F /* Persistence.swift */,
 			);
 			path = CoreData;
@@ -428,7 +411,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD88FDFA25AEF6A600F51A15 /* Preview Assets.xcassets in Resources */,
-				AD05F22A25B8B49100B56A6F /* video.MOV in Resources */,
 				ADCA339725C2C96700A4F85F /* core.json in Resources */,
 				AD08411325D3DDBB00DE4134 /* GoogleService-Info.plist in Resources */,
 				AD08DF2925ED2C9D00807600 /* Assets.xcassets in Resources */,
@@ -566,7 +548,6 @@
 				AD0E884C25C2AE67008779F8 /* ModelJsonData.swift in Sources */,
 				AD017FF625B9CC8D00D608F0 /* VideoPreview.swift in Sources */,
 				AD88FDF525AEF6A500F51A15 /* ContentView.swift in Sources */,
-				ADC1289725D30731001E6C66 /* YOLOv3.mlmodel in Sources */,
 				AD7BC3DF25D3F08C009C69B8 /* FireBaseModel.swift in Sources */,
 				AD89820525E8BF4A002161D9 /* RSQ1.mlmodel in Sources */,
 				ADEB520025CAF51300DBB049 /* ObjectDetectionViewModel.swift in Sources */,
@@ -574,7 +555,6 @@
 				AD88FE2C25AEFFBC00F51A15 /* SwipeInfoMenu.swift in Sources */,
 				AD8C02CD25B3981B008A7E8D /* CameraView.swift in Sources */,
 				AD88FDF325AEF6A500F51A15 /* RescueVisionApp.swift in Sources */,
-				ADE8DE8025B73E960009EA90 /* FireTruckInventory.xcdatamodeld in Sources */,
 				AD0E882925BAB7A6008779F8 /* VideoUIView.swift in Sources */,
 				ADEB51F425C9DA7500DBB049 /* InventoryItem.swift in Sources */,
 				AD8C02C525B35BFE008A7E8D /* HorizontalLine.swift in Sources */,
@@ -902,19 +882,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		ADE8DE7E25B73E950009EA90 /* FireTruckInventory.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				ADE8DE7F25B73E950009EA90 /* FireTruckInventory.xcdatamodel */,
-			);
-			currentVersion = ADE8DE7F25B73E950009EA90 /* FireTruckInventory.xcdatamodel */;
-			path = FireTruckInventory.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AD88FDE725AEF6A400F51A15 /* Project object */;
 }

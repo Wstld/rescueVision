@@ -9,13 +9,20 @@ import Foundation
 import Combine
 
 final class ObjectDetectionViewModel: ObservableObject {
+    //models
     var camera:CameraModel = CameraModel()
+    var firebaseModel = FireBaseModel()
+    
     @Published var showInfo:Bool = false
-    @Published var idObj:InventoryItem!
     @Published var loadingObject:Bool = false
+    
+    //object fowarded to view
+    @Published var idObj:InventoryItem!
+    
+    
 
    
-    var firebaseModel = FireBaseModel()
+    
     
    
     //Observer fires when name of object and object found is set in CameraModel.
