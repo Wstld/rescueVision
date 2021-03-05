@@ -21,11 +21,6 @@ final class ObjectDetectionViewModel: ObservableObject {
     @Published var idObj:InventoryItem!
     
     
-
-   
-    
-    
-   
     //Observer fires when name of object and object found is set in CameraModel.
     var anyCancellable: AnyCancellable? = nil
     init() {
